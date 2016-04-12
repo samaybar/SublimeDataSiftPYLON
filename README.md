@@ -9,12 +9,12 @@ Contact: [sam.aybar@datasift.com](mailto:sam.aybar@datasift.com)
 Makes HTTP requests to the Validate and Compile PYLON Endpoints. Will tell if you have valid CSDL or return the hash for the CSDL.
 
 ## Installation
-[Not yet supported]
+###Recommended
 Using the Sublime Text 3 Package Control plugin (http://wbond.net/sublime_packages/package_control)
-press *CMD + SHIFT + P* (on OS X) and find **Package Control: Install Package** and press *Enter*.
-Find this plugin in the list by name **DataSift PYLON**.
+press *CMD + SHIFT + P* (on OS X) and find **Package Control: Add Repository** and press *Enter*. Paste in the url for this Github repository (https://github.com/samaybar/SublimeDataSiftPYLON) Then *CMD + SHIFT + P* then Install Package and find this plugin in the list by name **Sublime DataSift PYLON**.
 
-Or git clone to your Sublime Text 3 packages folder directly (usually located at /Sublime Text 3/Packages/).
+###Alternate
+Or git clone to your Sublime Text 3 packages folder directly (usually located at /Sublime Text 3/Packages/User/).
 
 ## Configuration
 Add your PYLON authorization/api key to your Sublime Preferences.sublime-settings file (press *CMD + ,* on OS X)
