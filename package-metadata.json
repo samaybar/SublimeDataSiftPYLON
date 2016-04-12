@@ -1,1 +1,1 @@
-{"sublime_text": ">=3000", "dependencies": [], "version": "2014.06.14.11.42.06", "url": "https://github.com/braindamageinc/SublimeHttpRequester", "description": "DataSift PYLON plugin for Sublime Text 3", "platforms": ["*"]}
+{"sublime_text": ">=3000", "dependencies": [], "version": "2016.04.12.11.42.06", "url": "https://github.com/samaybar/SublimeDataSiftPYLON", "description": "DataSift PYLON plugin for Sublime Text 3", "platforms": ["*"]}
