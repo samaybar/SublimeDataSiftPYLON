@@ -617,11 +617,11 @@ class CompileAndStartCommand(sublime_plugin.TextCommand):
         resultsPresenter = ResultsPresenter()
         httpRequester = HttpRequester(resultsPresenter)
         httpRequester.request(selection)
-    
-class testCompletions(sublime_plugin.EventListener):
-        def on_query_completions(self, view, prefix, locations):
-            lang = "source.csdl"
-            scope = view.scope_name(view.sel()[0].a)
-            #if (lang in scope):
-            if(True):
-                return [("fb.all.content"),("fb.content")]
+#TODO implement syntax completion    
+# class testCompletions(sublime_plugin.EventListener):
+#         def on_query_completions(self, view, prefix, locations):
+#             lang = "source.csdl"
+#             scope = view.scope_name(view.sel()[0].a)
+#             #if (lang in scope):
+#             if(True):
+#                 return [("fb.all.content"),("fb.content")]
