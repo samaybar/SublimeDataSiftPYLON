@@ -24,7 +24,7 @@ Add your PYLON authorization/api key to your Sublime Preferences.sublime-setting
 }
 ```
 ## Usage
-From context Menu, select **Validate CSDL** to validate, **Compile CSDL** to compile.
+From context Menu, select **Validate CSDL** to validate, **Compile CSDL** to compile. If these commands are grayed out, copy the pylon_compiler.py file from the sublimedatasiftpylon directory to the parent directory.
 Or, select from Command Pallete (*CMD + SHIFT + P*)
 Keyboard shortcuts:
 Validate - *CTRL + ALT + V*
