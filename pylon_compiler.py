@@ -448,6 +448,7 @@ class ResultsPresenter():
 class ValidateCsdlCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
+        print("Validating...")
         window = sublime.active_window()
         window.run_command("show_panel", {"panel": "console", "toggle": True})
         global gPrevHttpRequest
@@ -495,6 +496,7 @@ class ValidateCsdlCommand(sublime_plugin.TextCommand):
 class CompileCsdlCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
+        print("Compiling...")
         window = sublime.active_window()
         window.run_command("show_panel", {"panel": "console", "toggle": True})
         global gPrevHttpRequest
@@ -541,82 +543,83 @@ class CompileCsdlCommand(sublime_plugin.TextCommand):
         return has_selection
 
 #under construction
-class CompileAndStartCommand(sublime_plugin.TextCommand):
-#TODO: 
-#1) configure to make start request (need to deal with waiting for original response)
-#2) send results to mongo (presently doesn't wait properly for response)
-    def run(self, edit):
-        global gPrevHttpRequest
-        global apikey 
-        apikey = self.view.settings().get('pylon_auth')
+# class CompileAndStartCommand(sublime_plugin.TextCommand):
+# #TODO: 
+# #1) configure to make start request (need to deal with waiting for original response)
+# #2) send results to mongo (presently doesn't wait properly for response)
+#     def run(self, edit):
+#         global gPrevHttpRequest
+#         global apikey 
+#         apikey = self.view.settings().get('pylon_auth')
       
-        global pylonendpoint
-        pylonendpoint =  "POST https://api.datasift.com/v1.3/pylon/compile"
+#         global pylonendpoint
+#         pylonendpoint =  "POST https://api.datasift.com/v1.3/pylon/compile"
 
-        selection = ""
-        if self.has_selection():
-            for region in self.view.sel():
-                # Concatenate selected regions together.
-                selection += self.view.substr(region)
-        else:
-            # Use entire document as selection
-            entireDocument = sublime.Region(0, self.view.size())
-            selection = self.view.substr(entireDocument)
+#         selection = ""
+#         if self.has_selection():
+#             for region in self.view.sel():
+#                 # Concatenate selected regions together.
+#                 selection += self.view.substr(region)
+#         else:
+#             # Use entire document as selection
+#             entireDocument = sublime.Region(0, self.view.size())
+#             selection = self.view.substr(entireDocument)
 
-        global csdlCompiled
-        csdlCompiled = selection
+#         global csdlCompiled
+#         csdlCompiled = selection
  
-        pylonauth = "Authorization: " + apikey
-        pyloncontenttype = "Content-type : application/json"
+#         pylonauth = "Authorization: " + apikey
+#         pyloncontenttype = "Content-type : application/json"
         
-        newselection = json.dumps(selection)
-        #add the trigger for reading line:
-        selection = pylonendpoint + "\n" + pylonauth + "\n" + pyloncontenttype + "\nPOST_BODY:\n" + "{\"csdl\" : " + newselection + "}"
-        
-
-        gPrevHttpRequest = selection
-        resultsPresenter = ResultsPresenter()
-        httpRequester = HttpRequester(resultsPresenter)
-        httpRequester.request(selection)
-        self.sendMongo(theResponse + "/n" + csdlCompiled)
-        
-    def has_selection(self):
-        has_selection = False
-
-        # Only enable menu option if at least one region contains selected text.
-        for region in self.view.sel():
-            if not region.empty():
-                has_selection = True
-
-        return has_selection
-
-    def sendMongo(self,textToSend):
-        
-        
-        global gPrevHttpRequest
-        global apikey 
-        apikey = self.view.settings().get('pylon_auth')
-        #print(apikey)
-        mongoapikey="MONGOAPIKEY"
-        dbname="MONGODBNAME"
-        collectionname="MONGOCOLLECTIONNAME"
-
-        global mongoendpoint
-        mongoendpoint =  "curl -i -X POST https://api.mongolab.com/api/1/databases/"+ dbname + "/collections/" + collectionname + "?apiKey=" +mongoapikey
-
-        selection = textToSend
-
-        mongocontenttype = "Content-type : application/json"
-        
-        newselection = json.dumps(selection)
-        #add the trigger for reading line:
-        selection = mongoendpoint + "\n"  + mongocontenttype + "\nPOST_BODY:\n" + "{\"csdl\" : " + newselection + "}"
+#         newselection = json.dumps(selection)
+#         #add the trigger for reading line:
+#         selection = pylonendpoint + "\n" + pylonauth + "\n" + pyloncontenttype + "\nPOST_BODY:\n" + "{\"csdl\" : " + newselection + "}"
         
 
-        #gPrevHttpRequest = selection
-        resultsPresenter = ResultsPresenter()
-        httpRequester = HttpRequester(resultsPresenter)
-        httpRequester.request(selection)
+#         gPrevHttpRequest = selection
+#         resultsPresenter = ResultsPresenter()
+#         httpRequester = HttpRequester(resultsPresenter)
+#         httpRequester.request(selection)
+#         self.sendMongo(theResponse + "/n" + csdlCompiled)
+        
+#     def has_selection(self):
+#         has_selection = False
+
+#         # Only enable menu option if at least one region contains selected text.
+#         for region in self.view.sel():
+#             if not region.empty():
+#                 has_selection = True
+
+#         return has_selection
+
+#     def sendMongo(self,textToSend):
+        
+        
+#         global gPrevHttpRequest
+#         global apikey 
+#         apikey = self.view.settings().get('pylon_auth')
+#         #print(apikey)
+#         mongoapikey="MONGOAPIKEY"
+#         dbname="MONGODBNAME"
+#         collectionname="MONGOCOLLECTIONNAME"
+
+#         global mongoendpoint
+#         mongoendpoint =  "curl -i -X POST https://api.mongolab.com/api/1/databases/"+ dbname + "/collections/" + collectionname + "?apiKey=" +mongoapikey
+
+#         selection = textToSend
+
+#         mongocontenttype = "Content-type : application/json"
+        
+#         newselection = json.dumps(selection)
+#         #add the trigger for reading line:
+#         selection = mongoendpoint + "\n"  + mongocontenttype + "\nPOST_BODY:\n" + "{\"csdl\" : " + newselection + "}"
+        
+
+#         #gPrevHttpRequest = selection
+#         resultsPresenter = ResultsPresenter()
+#         httpRequester = HttpRequester(resultsPresenter)
+#         httpRequester.request(selection)
+
 #TODO implement syntax completion    
 # class testCompletions(sublime_plugin.EventListener):
 #         def on_query_completions(self, view, prefix, locations):
