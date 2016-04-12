@@ -1,0 +1,10 @@
+[
+	{
+		"keys": ["ctrl+alt+v"],
+		"command": "validate_csdl"
+	},
+	{
+		"keys": ["ctrl+alt+c"],
+		"command": "compile_csdl"	
+	}
+]
