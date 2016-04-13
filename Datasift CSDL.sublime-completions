@@ -1,5 +1,5 @@
 {
-        "scope": "source.csdl variable.language.source.target",
+        "scope": "source.csdl variable.language.source.bol",
         "completions":
         [
                 //{ "trigger": "a", "contents": "<a href=\"$1\">$0</a>" },
