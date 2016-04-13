@@ -73,6 +73,41 @@
                 "links.domain",
                 "links.normalized_url",
                 "links.title",
-"links.url",
+                "links.url"
+        ]
+},
+{
+        "scope": "source.csdl variable.language.source.fb",
+        "completions":
+        [
+                "all.content",
+                "author.age",
+                "author.country",
+                "author.country_code",
+                "author.country_region",
+                "author.gender",
+                "author.region",
+                "author.type",
+                "content",
+                "hashtags",
+                "language",
+                "link",
+                "link_title",
+                "media_type",
+                "sentiment",
+                "topics.about",
+                "topics.category",
+                "topics.category_name",
+                "topics.company_overview",
+                "topics.location_city",
+                "topics.location_street",
+                "topics.mission",
+                "topics.name",
+                "topics.products",
+                "topics.release_date",
+                "topics.username",
+                "topics.website",
+                "topic_ids",
+                "type"
         ]
 }
