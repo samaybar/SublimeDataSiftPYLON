@@ -1,9 +1,8 @@
 {
         "scope": "source.csdl",
         "context": [
-      
-      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
-      { "key": "preceding_text", "operator": "regex_contains", "operand": "s", "match_all": true }
+
+      { "key": "preceding_text", "operator": "regex_contains", "operand": "^\S", "match_all": true }
    ]
         "completions":
         [
