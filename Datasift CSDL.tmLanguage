@@ -14,7 +14,7 @@
 			<key>comment</key>
 			<string>Interaction targets</string>
 			<key>match</key>
-			<string>\binteraction\.(content|geo|link|sample|source|title|type)\b</string>
+			<string>\binteraction\.(content|geo|link|sample|source|title|type|hashtags|media_type|ml\.categories|raw_content|subtype|tags|tag_tree|sample)\b</string>
 			<key>name</key>
 			<string>variable.language.source.target</string>
 		</dict>
@@ -71,6 +71,30 @@
 			<string>Facebook targets</string>
 			<key>match</key>
 			<string>\bfacebook\.(application|author\.avatar|author\.id|author\.link|author\.name|caption|description|likes\.counts|likes\.ids|likes\.names|link|message|name|og\.by|og\.length|og\.location|og\.photos|og\.title|og\.type|source|to\.ids|to\.names|type)\b</string>
+			<key>name</key>
+			<string>variable.language.source.target</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Facebook PYLON fb targets</string>
+			<key>match</key>
+			<string>\bfb\.(all\.content|(|parent\.)(author\.(age|country|country_code|country_region|gender|region|type)|content|hashtags|language|link|link_title|media_type|sentiment|topics\.(about|category|category_name|company_overview|location_city|location_street|mission|name|products|release_date|username|website)|topic_ids|type))\b</string>
+			<key>name</key>
+			<string>variable.language.source.target</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Facebook PYLON link targets</string>
+			<key>match</key>
+			<string>\links\.(code|domain|normalized_url|title|url)\b</string>
+			<key>name</key>
+			<string>variable.language.source.target</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Facebook PYLON fb\.author targets</string>
+			<key>match</key>
+			<string>\bfb\.(|parent\.)(age|country|country_code|country_region|gender|region|type)\b</string>
 			<key>name</key>
 			<string>variable.language.source.target</string>
 		</dict>
