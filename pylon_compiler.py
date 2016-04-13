@@ -622,14 +622,14 @@ class CompileCsdlCommand(sublime_plugin.TextCommand):
 #         httpRequester.request(selection)
 
 #TODO implement syntax completion    
-class testCompletions(sublime_plugin.EventListener):
-        def on_query_completions(self, view, prefix, locations):
-            lang = "source.csdl"
-            scope = view.scope_name(view.sel()[0].a)
-            #if (lang in scope):
-            currentLine = view.substr(view.line(view.sel()[0]))
-            regex = "(A-Za-Z)"
-            runAutocomplete = not re.search(regex,currentLine)
-            print runAutocomplete 
-            #if(True):
-            return ["fb.all.content","fb.content","interaction.sample"]
+# class testCompletions(sublime_plugin.EventListener):
+#         def on_query_completions(self, view, prefix, locations):
+#             lang = "source.csdl"
+#             scope = view.scope_name(view.sel()[0].a)
+#             #if (lang in scope):
+#             currentLine = view.substr(view.line(view.sel()[0]))
+#             regex = "(A-Za-Z)"
+#             runAutocomplete = not re.search(regex,currentLine)
+#             print runAutocomplete 
+#             #if(True):
+#             return ["fb.all.content","fb.content","interaction.sample"]

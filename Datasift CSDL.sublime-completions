@@ -1,6 +1,5 @@
 {
-        "scope": "source.csdl",
-        "match": "^\S"
+        "scope": "source.csdl - variable.language.source.target",
         "completions":
         [
                 //{ "trigger": "a", "contents": "<a href=\"$1\">$0</a>" },
