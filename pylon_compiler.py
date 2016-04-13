@@ -631,5 +631,5 @@ class testCompletions(sublime_plugin.EventListener):
             regex = "(A-Za-Z)"
             runAutocomplete = not re.search(regex,currentLine)
             print runAutocomplete 
-            if(True):
-                return [("fb.all.content"),("fb.content"),("interaction.sample")]
+            #if(True):
+            return ["fb.all.content","fb.content","interaction.sample"]
