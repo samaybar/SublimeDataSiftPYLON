@@ -20,9 +20,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Interaction targets</string>
+			<string>All PYLON targets</string>
 			<key>match</key>
-			<string>\binteraction\.(content|geo|link|sample|source|title|type|hashtags|media_type|ml\.categories|raw_content|subtype|tags|tag_tree(\.\w*)*|sample)\b</string>
+			<string>\b(interaction\.(content|hashtags|media_type|ml\.categories|raw_content|subtype|tags|tag_tree(\.\w*)*|sample))|(fb\.(all\.content|(|parent\.)(author\.(age|country|country_code|country_region|gender|region|type)|content|hashtags|language|link|link_title|media_type|sentiment|topics\.(about|category|category_name|company_overview|location_city|location_street|mission|name|products|release_date|username|website)|topic_ids|type)))|(links\.(code|domain|normalized_url|title|url))\b</string>
 			<key>name</key>
 			<string>constant.other.database-name.sql</string>
 		</dict>
