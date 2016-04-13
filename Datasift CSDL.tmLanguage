@@ -22,7 +22,7 @@
 			<key>comment</key>
 			<string>Interaction targets</string>
 			<key>match</key>
-			<string>\binteraction\.(content|geo|link|sample|source|title|type|hashtags|media_type|ml\.categories|raw_content|subtype|tags|tag_tree(\.\w)*|sample)\b</string>
+			<string>\binteraction\.(content|geo|link|sample|source|title|type|hashtags|media_type|ml\.categories|raw_content|subtype|tags|tag_tree(\.\w*)*|sample)\b</string>
 			<key>name</key>
 			<string>constant.other.database-name.sql</string>
 		</dict>
