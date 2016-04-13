@@ -1,9 +1,6 @@
 {
         "scope": "source.csdl",
-        "context": [
-
-      { "key": "preceding_text", "operator": "regex_contains", "operand": "^\S", "match_all": true }
-   ]
+        "match": "^\S"
         "completions":
         [
                 //{ "trigger": "a", "contents": "<a href=\"$1\">$0</a>" },
