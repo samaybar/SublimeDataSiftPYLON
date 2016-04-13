@@ -14,17 +14,9 @@
 			<key>comment</key>
 			<string>Beginning of line</string>
 			<key>match</key>
-			<string>\b^sam\b</string>
+			<string>\b^\S\b</string>
 			<key>name</key>
 			<string>variable.language.source.bol</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>FB namespace</string>
-			<key>match</key>
-			<string>\b(fb\.|fb\.parent\.)\b</string>
-			<key>name</key>
-			<string>variable.language.source.fb</string>
 		</dict>
 		<dict>
 			<key>comment</key>
