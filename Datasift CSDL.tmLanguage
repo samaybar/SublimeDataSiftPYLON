@@ -24,7 +24,7 @@
 			<key>match</key>
 			<string>\binteraction\.(content|geo|link|sample|source|title|type|hashtags|media_type|ml\.categories|raw_content|subtype|tags|tag_tree|sample)\b</string>
 			<key>name</key>
-			<string>storage.type.sql</string>
+			<string>constant.other.database-name.sql</string>
 		</dict>
 		<dict>
 			<key>comment</key>
