@@ -1,0 +1,133 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+name: DataSift CSDL
+scopeName: source.csdl
+fileTypes: [csdl]
+uuid: 3f78c2ba-622c-4d6c-bfc2-77ce2b9726cf
+
+patterns:
+- comment: Interaction targets
+  name: variable.language.source.target
+  match: \binteraction\.(content|geo|link|sample|source|title|type)\b
+
+- comment: Interaction author targets
+  name: variable.language.source.target
+  match: \binteraction\.author\.(avatar|id|link|name|username)\b
+
+- comment: 2channel targets
+  name: variable.language.source.target
+  match: \b2ch\.(author\.name|content|contenttype|link|thread|title|type)\b
+
+- comment: Amazon targets
+  name: variable.language.source.target
+  match: \bamazon\.(author\.link|author\.name|content|contenttype|link|thread|title|type)\b
+
+- comment: Blog targets
+  name: variable.language.source.target
+  match: \bblog\.(author\.avatar|author\.link|author\.name|author\.username|content|contenttype|domain|link|post\.link|post\.title|title|type)\b
+
+- comment: Board targets
+  name: variable.language.source.target
+  match: \bboard\.(author\.age|author\.avatar|author\.gender|author\.link|author\.location|author\.name|author\.registered|author\.signature|author\.username|content|contenttype|domain|link|thread|title|type)\b
+
+- comment: DailyMotion targets
+  name: variable.language.source.target
+  match: \bdailymotion\.(author\.link|author\.username|category|content|contenttype|duration|tags|thumbnail|title|videolink)\b
+
+- comment: Facebook targets
+  name: variable.language.source.target
+  match: \bfacebook\.(application|author\.avatar|author\.id|author\.link|author\.name|caption|description|likes\.counts|likes\.ids|likes\.names|link|message|name|og\.by|og\.length|og\.location|og\.photos|og\.title|og\.type|source|to\.ids|to\.names|type)\b
+
+- comment: Flickr targets
+  name: variable.language.source.target
+  match: \bflickr\.(author\.link|author\.name|author\.username|content|contenttype|link|thread|title|type)\b
+
+- comment: IMDb targets
+  name: variable.language.source.target
+  match: \bimdb\.(author\.link|author\.name|content|contenttype|link|thread|title|type)\b
+
+- comment: Newscred targets
+  name: variable.language.source.target
+  match: \bnewscred\.(article\.authors|article\.category|article\.content|article\.domain|article\.title|article\.topics|image\.attribution\.link|image\.attribution\.text|image\.caption|source\.domain|type|video\.caption|video\.category|video\.domain|video\.title|video\.topics)\b
+
+- comment: Reddit targets
+  name: variable.language.source.target
+  match: \breddit\.(author\.link|author\.name|content|contenttype|link|thread|title|type)\b
+
+- comment: Topix targets
+  name: variable.language.source.target
+  match: \btopix\.(author\.location|author\.name|content|contenttype|link|thread|title|type)\b
+
+- comment: 'Twitter: Tweet targets'
+  name: variable.language.source.target
+  match: \btwitter\.(domains|geo|in_reply_to_screenname|links|mentions|source|status|text)\b
+
+- comment: 'Twitter: User targets'
+  name: variable.language.source.target
+  match: \btwitter\.user\.(description|followers_count|follower_ratio|friends_count|id|lang|listed_count|location|name|profile_age|screen_name|statuses_count|time_zone|url|verified)\b
+
+- comment: 'Twitter: Place targets'
+  name: variable.language.source.target
+  match: \btwitter\.place\.(attributes|country|country_code|full_name|name|place_type|url)\b
+
+- comment: 'Twitter: Retweet targets'
+  name: variable.language.source.target
+  match: \btwitter\.retweet\.(count|domains|elapsed|links|mentions|source|text)\b
+
+- comment: 'Twitter: Retweet User targets'
+  name: variable.language.source.target
+  match: \btwitter\.retweet\.user\.(description|followers_count|follower_ratio|friends_count|id|lang|listed_count|location|name|profile_age|screen_name|statuses_count|time_zone|url|verified)\b
+
+- comment: 'Twitter: Retweeted targets'
+  name: variable.language.source.target
+  match: \btwitter\.retweeted\.id\b
+
+- comment: 'Twitter: Retweeted Place targets'
+  name: variable.language.source.target
+  match: \btwitter\.retweeted\.place\.(attributes|country|country_code|full_name|name|place_type|url)\b
+
+- comment: 'Twitter: Retweeted User targets'
+  name: variable.language.source.target
+  match: \btwitter\.retweeted\.user\.(description|followers_count|follower_ratio|friends_count|id|lang|listed_count|location|name|profile_age|screen_name|statuses_count|time_zone|url|verified)\b
+
+- comment: Video targets
+  name: variable.language.source.target
+  match: \bvideo\.(author\.avatar|author\.link|author\.name|author\.username|category|commentslink|content|contenttype|domain|duration|tags|thumbnail|title|type|videolink)\b
+
+- comment: Wikipedia targets
+  name: variable.language.source.target
+  match: \bwikipedia\.(author\.contributions|author\.talk|author\.username|body|categories|changetype|diff\.changes\.added|diff\.changes\.removed|diff\.from|diff\.to|externallinks|images|namespace|newlen|ns|oldlen|pageid|parentid|title)\b
+
+- comment: YouTube targets
+  name: variable.language.source.target
+  match: \byoutube\.(author\.link|author\.name|category|commentslink|content|contenttype|duration|tags|thumbnail|title|type|videolink)\b
+
+- comment: Case sensitive Operators
+  name: keyword.operator.source.operators
+  match: \b(?i)(cs )?(contains|substr|contains_any|contains_near|any|contains_substr|near)\b
+
+- comment: Operators
+  name: keyword.operator.source.operators
+  match: \b(?i)(exists|not|in|regex_partial|regex_exact|geo_box|geo_radius|geo_polygon|or|and)\b
+
+- comment: Operators
+  name: keyword.operator.source.operators
+  match: (<|>|<=|>=|<>|==|\!=)
+
+- comment: Controls
+  name: keyword.control.source.operators
+  match: \b(?i)(tag|return|stream)\b
+
+- name: comment.block
+  begin: /\*
+  end: \*/
+  captures:
+    '0': {name: punctuation.definition.comment}
+
+- name: comment.line.double-slash
+  match: (//).*?($\n?|(?=\?>))
+  captures:
+    '1': {name: punctuation.definition.comment}
+
+- name: string.quoted.double.untitled
+  begin: '"'
+  end: '"'
