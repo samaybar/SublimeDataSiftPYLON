@@ -2,12 +2,11 @@
 name: DataSift CSDL
 scopeName: source.csdl
 fileTypes: [csdl]
-uuid: 3f78c2ba-622c-4d6c-bfc2-77ce2b9726cf
 
 patterns:
 - comment: Interaction targets
   name: variable.language.source.target
-  match: \binteraction\.(content|geo|link|sample|source|title|type)\b
+  match: \binteraction\.(content|geo|link|sample|source|title|type|hashtags|media_type|ml\.categories|raw_content|subtype|tags|tag_tree|sample)\b
 
 - comment: Interaction author targets
   name: variable.language.source.target
@@ -36,6 +35,18 @@ patterns:
 - comment: Facebook targets
   name: variable.language.source.target
   match: \bfacebook\.(application|author\.avatar|author\.id|author\.link|author\.name|caption|description|likes\.counts|likes\.ids|likes\.names|link|message|name|og\.by|og\.length|og\.location|og\.photos|og\.title|og\.type|source|to\.ids|to\.names|type)\b
+
+- comment: Facebook PYLON fb targets
+  name: variable.language.source.target
+  match: \bfb\.(all\.content|(|parent\.)(author\.(age|country|country_code|country_region|gender|region|type)|content|hashtags|language|link|link_title|media_type|sentiment|topics\.(about|category|category_name|company_overview|location_city|location_street|mission|name|products|release_date|username|website)|topic_ids|type))\b
+
+- comment: Facebook PYLON link targets
+  name: variable.language.source.target
+  match: \links\.(code|domain|normalized_url|title|url)\b
+
+- comment: Facebook PYLON fb\.author targets
+  name: variable.language.source.target
+  match: \bfb\.(|parent\.)(age|country|country_code|country_region|gender|region|type)\b
 
 - comment: Flickr targets
   name: variable.language.source.target
