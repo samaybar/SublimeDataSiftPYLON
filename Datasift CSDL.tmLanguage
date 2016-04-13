@@ -14,7 +14,7 @@
 			<key>comment</key>
 			<string>Beginning of line</string>
 			<key>match</key>
-			<string>([^ ]|\t)(f|i)?</string>
+			<string>([^ ]|\t)(f|i)</string>
 			<key>name</key>
 			<string>variable.language.source.bol</string>
 		</dict>
