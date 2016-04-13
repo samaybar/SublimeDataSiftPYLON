@@ -14,7 +14,7 @@
 			<key>comment</key>
 			<string>Beginning of line</string>
 			<key>match</key>
-			<string>\b(^\S)\b</string>
+			<string>\t|^</string>
 			<key>name</key>
 			<string>variable.language.source.bol</string>
 		</dict>
@@ -22,7 +22,7 @@
 			<key>comment</key>
 			<string>FB namespace</string>
 			<key>match</key>
-			<string>\b(^fb\.|fb\.parent\.)b</string>
+			<string>\b(^fb\.|fb\.parent\.)</string>
 			<key>name</key>
 			<string>variable.language.source.fb</string>
 		</dict>
