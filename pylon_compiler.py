@@ -621,10 +621,10 @@ class CompileCsdlCommand(sublime_plugin.TextCommand):
 #         httpRequester.request(selection)
 
 #TODO implement syntax completion    
-# class testCompletions(sublime_plugin.EventListener):
-#         def on_query_completions(self, view, prefix, locations):
-#             lang = "source.csdl"
-#             scope = view.scope_name(view.sel()[0].a)
-#             #if (lang in scope):
-#             if(True):
-#                 return [("fb.all.content"),("fb.content")]
+class testCompletions(sublime_plugin.EventListener):
+        def on_query_completions(self, view, prefix, locations):
+            lang = "source.csdl"
+            scope = view.scope_name(view.sel()[0].a)
+            #if (lang in scope):
+            if(True):
+                return [("fb.all.content"),("fb.content"),("interaction.sample")]
