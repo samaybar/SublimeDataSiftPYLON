@@ -32,14 +32,6 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>FB PYLON targets</string>
-			<key>match</key>
-			<string>\s*fb\.</string>
-			<key>name</key>
-			<string>variable.language.source.fb</string>
-		</dict>
-		<dict>
-			<key>comment</key>
 			<string>Interaction targets</string>
 			<key>match</key>
 			<string>\binteraction\.(content|geo|link|sample|source|title|type|hashtags|media_type|ml\.categories|raw_content|subtype|tags|tag_tree|sample)\b</string>
