@@ -8,6 +8,10 @@
 	</array>
 	<key>name</key>
 	<string>DataSift CSDL</string>
+	<key>foldingStartMarker</key>
+	<string>\{\s*$</string>
+	<key>foldingStopMarker</key>
+	<string>^\s*\}</string>
 	<key>patterns</key>
 	<array>
 		<dict>
