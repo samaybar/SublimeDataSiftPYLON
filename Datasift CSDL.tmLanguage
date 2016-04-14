@@ -14,7 +14,7 @@
 			<key>comment</key>
 			<string>Beginning of line</string>
 			<key>match</key>
-			<string>\b\w*^\S\b</string>
+			<string>\t*\b\w*^\S\b</string>
 			<key>name</key>
 			<string>variable.language.source.bol</string>
 		</dict>
