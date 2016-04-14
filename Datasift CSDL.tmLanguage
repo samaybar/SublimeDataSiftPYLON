@@ -104,30 +104,6 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Facebook PYLON fb targets</string>
-			<key>match</key>
-			<string>\bfb\.(all\.content|(|parent\.)(author\.(age|country|country_code|country_region|gender|region|type)|content|hashtags|language|link|link_title|media_type|sentiment|topics\.(about|category|category_name|company_overview|location_city|location_street|mission|name|products|release_date|username|website)|topic_ids|type))\b</string>
-			<key>name</key>
-			<string>variable.language.source.target</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Facebook PYLON link targets</string>
-			<key>match</key>
-			<string>\links\.(code|domain|normalized_url|title|url)\b</string>
-			<key>name</key>
-			<string>variable.language.source.target</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Facebook PYLON fb\.author targets</string>
-			<key>match</key>
-			<string>\bfb\.(|parent\.)(age|country|country_code|country_region|gender|region|type)\b</string>
-			<key>name</key>
-			<string>variable.language.source.target</string>
-		</dict>
-		<dict>
-			<key>comment</key>
 			<string>Flickr targets</string>
 			<key>match</key>
 			<string>\bflickr\.(author\.link|author\.name|author\.username|content|contenttype|link|thread|title|type)\b</string>
