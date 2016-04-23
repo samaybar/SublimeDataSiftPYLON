@@ -1,5 +1,5 @@
 [
-	{ "caption": "Validate CSDL (PYLON)",
+	{ "caption": "Validate CSDL",
     "command": "validate_csdl"},
     { "caption": "Compile CSDL",
     "command": "compile_csdl"}

@@ -73,6 +73,12 @@
                 "links.domain",
                 "links.normalized_url",
                 "links.title",
-                "links.url"
+                "links.url",
+                "or",
+                "not",
+                "and",
+                "tag",
+                "return",
+                "stream"
         ]
 }
