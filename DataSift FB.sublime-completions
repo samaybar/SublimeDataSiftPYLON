@@ -30,6 +30,12 @@
                 "topics.username",
                 "topics.website",
                 "topic_ids",
-                "type"
+                "type",
+                "or",
+                "not",
+                "and",
+                "tag",
+                "return",
+                "stream"
         ]
 }
